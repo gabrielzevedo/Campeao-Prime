@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Supermercados Campeão Prime</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="topo" class="no-newsletter">
+
+    <header>
+        <div class="logo no-underline">
+            <a href="#"><img src="img/logo-campeao-hd.png" alt="Supermercados Campeão Prime" width="230"></a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#topo">Home</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li class="newsletter-element"><a href="#newsletter">Cadastre-se</a></li>
+                <li><a href="#mapa">Como Chegar</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="img/banner1.png" alt="">
+        </section>
+        <section class="sub-hero">
+            <ul>
+                <li><img src="img/icon-1-hd.png" alt=""><span>Entrega Domicílio</span></li>
+                <li><img src="img/icon-2-hd.png" alt=""><span>Não perca este excelente negócio</span> </li>
+                <li><img src="img/icon-3-hd.png" alt=""><span>A mais alta qualidade de produtos</span></li>
+            </ul>
+        </section>
+        <section class="produtos" id="promocoes">
+            <div class="linha">
+                <div class="produto">
+                    <div class="desc">
+                        <div class="titulo">Café Pilão</div>
+                        <div class="preco">R$<strong>9</strong>,50/UN</div>
+                    </div>
+                    <img src="img/produtos/1.png" alt="">
+                </div>
+                <div class="produto alt">
+                    <div class="desc">
+                        <div class="titulo">Peito de Peru Sadia</div>
+                        <div class="preco">R$<strong>23</strong>,50/KG</div>
+                    </div>
+                    <img src="img/produtos/2.png" alt="">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="produto alt">
+                    <div class="desc">
+                        <div class="titulo">Coca-Cola 2,5L</div>
+                        <div class="preco">R$<strong>5</strong>,99/UN</div>
+                    </div>
+                    <img src="img/produtos/3.png" alt="">
+                </div>
+                <div class="produto">
+                    <div class="desc">
+                        <div class="titulo">Heineken Longneck</div>
+                        <div class="preco">R$<strong>3</strong>,50/UN</div>
+                    </div>
+                    <img src="img/produtos/4.png" alt="">
+                </div>
+            </div>
+        </section>
+        <div class="prime">
+            <p class="obs">Ofertas válidas até dia 00/00/00, somente na loja Campeão Barra Prime.</p>
+            <img src="img/logo-prime-hd.png" alt="Prime" width="140">
+        </div>
+        <section class="newsletter newsletter-element" id="newsletter">
+            <h2>Deixe seu e-mail para receber promoções do Campeão</h2>
+            <form action="" method="">
+                <input type="text" placeholder="Insira seu e-mail" name="email" />
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section class="mapa" id="mapa">
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+            <div style='overflow:hidden;min-height: 500px;height:35vw;width:100%;'>
+                <div id='gmap_canvas' style='min-height: 500px;height:35vw;width:100%;'></div>
+                <div></div>
+                <div></div>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none!important;
+                        background: none!important
+                    }
+                </style>
+            </div>
+            <script type='text/javascript'>
+                function init_map() {
+                    var myOptions = {
+                        zoom: 17,
+                        center: new google.maps.LatLng(-23.004905, -43.326069),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: new google.maps.LatLng(-23.004905, -43.326069)
+                    });
+                    infowindow = new google.maps.InfoWindow({
+                        content: '<strong>Supermercados Campeão Prime</strong><br>Av. Afonso Arinos de Melo Franco, 222 - <br>Barra da Tijuca, Rio de Janeiro - RJ<br>'
+                    });
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map, marker);
+                    });
+                    infowindow.open(map, marker);
+                }
+                google.maps.event.addDomListener(window, 'load', init_map);
+            </script>
+            <!--
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3088.2233597647137!2d-43.32483147102303!3d-23.004040134592245!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2fd3cfbd776bf8bf!2sSupermercados+Campe%C3%A3o+Prime!5e0!3m2!1spt-BR!2sbr!4v1524597728762&language=pt-BR" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+        </section>
+        <footer id="contato">
+            <div class="logo no-underline">
+                <a href="#"><img src="img/logo-campeao-branco-hd.png" width="150" alt="Supermercados Campeão Prime"></a>
+            </div><br>
+            <p>Av. Afonso Arinos de Melo Franco, 222 - Barra da Tijuca, Rio de Janeiro - RJ</p>
+            <p>Tel: 2439-5954</p>
+            <!--<nav class="menu">
+                <ul>
+                    <li><a href="#topo">Home</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                    <li class="newsletter-element"><a href="#newsletter">Cadastre-se</a></li>
+                    <li><a href="#mapa">Como Chegar</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>-->
+        </footer>
+        <div class="scroll-topo"><a href="#topo"><img src="img/icon-topo.png" alt="" width="15"><span>Subir para o topo da página</span></a></div>
+    </main>
+
+
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
